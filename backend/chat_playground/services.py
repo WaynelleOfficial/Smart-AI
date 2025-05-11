@@ -30,6 +30,8 @@ def invoke(prompt):
     response = bedrock_runtime.invoke_model(
         body=json.dumps(prompt_config),
         modelId="anthropic.claude-v2"
+        contentType='application/json',
+        accept='application/json'
     )
 
     # response = bedrock_runtime.invoke_model(
