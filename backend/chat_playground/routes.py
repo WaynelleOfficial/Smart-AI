@@ -8,12 +8,11 @@ router = APIRouter()
 @router.post("/chat/model/chat/anthropic.claude-v2/invoke")
 
 def invoke(body: models.ChatRequest):
-    print("didnt even make it past post u get the prompt?")
 
     try:
-        print("did u get the prompt? Prompt:"+ body.prompt)
+        print("did u get the prompt? Prompt: "+ body.prompt)
         completion = services.invoke(body.prompt)
-        print("did u get the ans? Response:"+ completion)
+        # print("did u get the ans? Response :"+ completion)
         return models.ChatResponse(
             completion=completion
         )
