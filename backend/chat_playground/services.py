@@ -40,7 +40,7 @@ def invoke(prompt):
     # )
 
     response_body = json.loads(response.get("body").read())
-    print(response_body.decode())
+    print(response_body.get("completion"))
 
 
     #extract a value from a JSON object using the key "completion"
