@@ -14,7 +14,7 @@ const Inputs = ({ onResponse, onError, setLoading }) => {
     event.preventDefault(); // Prevent the default form submission behavior
 
     if (!prompt.trim()) {
-      onError('Please enter a goal for your business.');
+      onError('    Please enter a goal for your business.');
       return;
     }
     console.log('inputs.py: 3');
@@ -57,20 +57,20 @@ const Inputs = ({ onResponse, onError, setLoading }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className="questioner">
         <label htmlFor="prompt" className="block text-gray-700 text-sm font-bold mb-2">
-          Enter your goal for your business:
+          What is your business, and what is a goal you want to acheive in your business:
         </label>
         <textarea
           id="prompt"
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="response-type-here shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           rows={5}
           value={prompt}
           onChange={handleInputChange}
-          placeholder="Clear goals means more productivity..."
+          placeholder="Clear actionable goals = more productivity..."
         />
       </div>
-      <div className="mt-4">
+      <div className="mt-4" id = "q-submit">
         <button
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -83,3 +83,6 @@ const Inputs = ({ onResponse, onError, setLoading }) => {
 };
 
 export default Inputs;
+
+// I'm a baker and I want to move to a bigger building
+// I'm a gallery owner, and I want to open a second location 

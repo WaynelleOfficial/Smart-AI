@@ -28,10 +28,10 @@ export async function POST(request) {
     }
 
     const data = await backendResponse.json();
-    console.log('route.js: Data received from backend:', data);
+    // console.log('route.js: Data received from backend:', data);
     // console.log('Response from backend:', data);
     const frontendResponse = { response: data.completion };
-    console.log('route.js: Response sent to frontend:', frontendResponse);
+    // console.log('route.js: Response sent to frontend:', frontendResponse);
     return NextResponse.json(frontendResponse);
     
 

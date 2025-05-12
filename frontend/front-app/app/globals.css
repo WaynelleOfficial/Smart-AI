@@ -6,7 +6,7 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -33,6 +33,8 @@ h1 {
   margin: 3rem auto;
   color: #ede9f3;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+    justify-content: center;
 }
 
 p {
@@ -50,4 +52,54 @@ p a:hover,
 p a:active {
   color: #bd3df4;
   border-color: #bd3df4;
+}
+
+
+.questioner{
+  display: grid;
+  row-gap: 5%;
+  margin: 2%;
+}
+#q-submit{
+  margin-right: 4%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.loading-txt{
+  margin-left: 1%;
+}
+.loading-spinner{
+  display: flex;
+  align-content: center;
+}
+
+#q-submit button {
+  margin-left: 5%;
+  border: cornflowerblue solid;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: lavenderblush;
+  font-family: system-ui;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#q-submit button:hover {
+  background-color: rgb(246, 206, 219);
+  transform: scale(1.03);
+}
+.response h3{
+  margin-left: 1%;
+}
+.response-type-here{
+margin-top: 1.5%;
+}
+
+.r-field{
+  margin: 2%;
+  padding: 1%;
+  font-size: 1rem;
+  border: bisque solid;
+  border-radius: 20px;
 }
